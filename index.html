@@ -3,63 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title ICON -->
+    <link rel="icon" href="./iconmonstr-laptop-6.svg">
+
+    <!-- EXTERNAL CSS -->
     <link rel="stylesheet" href="./index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <title> Responsive Web Design</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <title> Dev ED Project</title>
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="./images/logo.svg" alt="logo">
-            <h4 class="logo">
-                Three dots
-            </h4>
-        </div>
 
-        <nav>
-            <ul class="nav-links">
-                <li> <a class="nav-link href="#"> Specs</a></li>
-                <li> <a class="nav-link href="#"> Products</a></li>
-                <li> <a class="nav-link href="#"> Contact</a></li>
-            </ul>
-        </nav>
-        <div class="cart">
-            <img src="./images/cart.svg" alt="cart">
-        </div>
+    <header>
+
+        <!-- logo with text container -->
+
+            <div class="logo-with-text-container">
+                <img src="./logo.svg" alt="logo">
+
+                <h3 class="logo-text">Super...Laptop</h3>
+            </div>
+
+        <!-- end of logo with text container -->
+
+        <!-- nav-links -->
+
+            <nav>
+                
+                <ul class="nav-links">
+
+                    <li class="nav-item">
+                        <a href="#">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#">Products</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#">Contact</a>
+                    </li>
+
+                </ul>
+                
+            </nav>
+
+        <!-- end of nav-links -->
+
+        <!-- cart-icon -->
+
+            <div class="cart-icon">
+                <img src="./cart.svg" alt="cart">
+            </div>
+
+        <!-- end of cart-icon -->
+
     </header>
 
     <main>
-        <section class="presentation">
-            <div class="introduction">
-                <div class="intro-text">
-                    <h1>
-                        Laptop for the Future
-                    </h1>
+        <section class="main">
+
+            <div class="text-with-buttons">
+
+                <div class="text-col">
+                    <h2>
+                        The Future Laptop for College Students
+                    </h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id quaerat, incidunt omnis harum eos deserunt?
+                        Suitable for these Digital era in 2020 World
                     </p>
                 </div>
-                <div class="cta">
-                    <button class="cta-select"> 11 Inch</button>
-                    <button class="cta-add"> Add to cart</button>
+
+                <div class="buttons-col">
+                    <button class="select">
+                        13' Inches
+                    </button>
+
+                    <button class="add">
+                        Add to Cart
+                    </button>
                 </div>
+
             </div>
-            <div class="cover">
-                <img src="./images/matebook.png" alt="matebook"/>
+
+            <div class="photo">
+                <img src="./matebook.png" alt="matebook">
             </div>
+
         </section>
 
-        <div class="laptop-select">
-            <img src="./images/arrow-left.svg" alt="arrow-left">
-            <img src="./images/dot.svg" alt="dot">
-            <img src="./images/dot-full.svg" alt="dot-full">
-            <img src="./images/dot-full.svg" alt="dot-full">
-            <img src="./images/arrow-right.svg" alt="arrow-right">
+        <div class="arrow-icons">
+            <img src="./arrow-left.svg" alt="arrow-left">
+            <img src="./dot.svg" alt="dot">
+            <img src="./dot-full.svg" alt="dot-full">
+            <img src="./dot-full.svg" alt="dot-full.svg">
+            <img src="./arrow-right.svg" alt="arrow-right">
         </div>
 
-        <img class="big-eclipse" src="./images/big-eclipse.svg" alt="big-eclipse">
-        <img class="mid-eclipse" src="./images/mid-eclipse.svg" alt="mid-eclipse">
-        <img class="small-eclipse" src="./images/small-eclipse.svg" alt="small-eclipse">
+        <img src="./big-eclipse.svg" class="big-eclipse" alt="big-eclipse">
+        <img src="./mid-eclipse.svg" class="mid-eclipse" alt="mid-eclipse">
+        <img src="./small-eclipse.svg" class="small-eclipse" alt="small-eclipse">
+        
     </main>
+
 </body>
 </html>
