@@ -1,161 +1,162 @@
-$cta-color: #c36cbb;
-$font: 'Poppins', sans-serif;
-
-*
-{
-    margin: 0px;
-    padding: 0px;
+body{
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
-}
-
-body
-{
-    font-family: $font
+    font-family: 'Poppins', sans-serif;
 }
 
 button{
-    font-family: $font;
+    font-family: 'Poppins',sans-serif;
 }
+
+// Universal Effects
+    a{
+        text-decoration: none;
+    }
+
+    a:hover{
+        text-decoration: underline;
+    }
+
+    li{
+        list-style: none;
+    }
+
+    $buttoncolor:#C36CBB;
+// End of Universal Effects 
 
 header{
+
+    // Converts the (parent elements) column into row
     display: flex;
-    width: 90%;
+
+    width: 80%;
     height: 10vh;
     margin: auto;
+
+    // make child elements to stay in center on Y-axis
     align-items: center;
+
+    .logo-with-text-container,.nav-links,.cart-icon{
+        // Converts the (child elements) column into row
+        display: flex;
+    }
+
+    .logo-with-text-container{
+        flex: 1;
+        img{
+            cursor: pointer;
+        }
+
+        .logo-text{
+            font-weight: bold;
+            color: lightcoral;
+            margin: 5px;
+        }
+    }
+    
+    nav{
+        flex: 2;
+
+        .nav-links{
+            justify-content: space-around;
+
+            .nav-item a{
+                color: #5F5F79;
+                font-size: 1.2rem;
+            }
+        }
+    }
+    
+    .cart-icon{
+        flex: 1;
+        cursor: pointer;
+
+        // Effects on X-axis
+        justify-content: flex-end;
+    }
 }
 
-.logo-container,.nav-links,.cart{
+.main{
+    // Converts the (parent elements) column into row
     display: flex;
-}
 
-.logo-container{
-    flex: 1;
-}
-
-.logo{
-    font-weight: 400;
-    margin: 5px;
-}
-
-nav{
-    flex: 2;
-}
-
-.nav-links{
-    justify-content: space-around;
-    list-style: none;
-}
-
-.nav-link{
-    color: #5f5f79;
-    font-size: 18px;
-    text-decoration: none;
-}
-
-.cart{
-    flex: 1;
-    justify-content: flex-end;
-}
-
-.presentation{
-    display: flex;
-    width: 90%;
+    width: 80%;
     margin: auto;
     min-height: 80vh;
+
+    // make child elements to stay in center on Y-axis
     align-items: center;
-}
 
-.introduction{
-    flex: 1;
-}
+    .text-with-buttons{
+        flex: 1;
 
-.intro-text h1{
-    font-size: 44px;
-    font-weight: 500;
-    background: linear-gradient(to right,#494964,#6f6f89);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+        .text-col 
+        {
+            h2{
+                font-size: 40px;
+                font-weight: 500;
 
-.intro-text p{
-    margin-top: 5px;
-    font-size: 22px;
-    color: #585772;
-}
+                // background:linear-gradient(direction(left - right) starts color1 continues with color2)
+                background: linear-gradient(to right, #494964, #6F6F89);
 
-.cta{
-    padding: 50px 0px 0px 0px;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
 
-    .cta-select{
-        border: 2px solid $cta-color;
-        background: transparent;
-        color:$cta-color;
-        width: 150px;
-        height: 50px;
-        cursor: pointer;
-        font-size: 16px;
+            p{
+            margin-top: 5px;
+            font-size: 20px;
+            color: #585772;
+            text-transform: capitalize;
+            }
+            
+        }
+
+        .buttons-col{
+            padding-top: 50px;
+
+            .select{
+                color: $buttoncolor;
+                border: 2px solid $buttoncolor;
+                cursor: pointer;
+                height: 50px;
+                width: 150px;
+                font-size: 16px;
+                background: transparent;
+            }
+
+            .add{
+                cursor: pointer;
+                height: 50px;
+                width: 150px;
+                background-color: $buttoncolor;
+                border: none;
+                color: #fff;
+                margin-left: 5px;
+                margin-top: 2px;
+                font-size: 16px;
+            }
+        }
     }
 
-    .cta-add{
-        background: $cta-color;
-        width: 150px;
-        height: 50px;
-        cursor: pointer;
-        font-size: 16px;
-        border: none;
-        color: #fff;
-        margin-left: 30px;
-        margin-bottom: 30px;
+    .photo{
+        flex: 1;
+        height: 60vh;
+
+        img{
+            height: 100%;
+
+            // filter:drop-shadow (offset-x offset-y blur-radius color)
+            filter: drop-shadow(0px 7px 4px  $buttoncolor);
+
+            // animation:name duration timing-function
+            animation: drop 2s ease;
+        }
     }
 }
 
-.cover{
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    height: 60vh;
-}
-
-.cover img{
-    height: 100%;
-    // box-shadow: 3px 3px 3px black;
-    filter: drop-shadow(0px 5px 3px gray);
-    animation: drop 1.5s ease;
-}
-
-.big-eclipse{
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    z-index: -1;
-    opacity: 0.5;
-    height: 80%;
-}
-
-.mid-eclipse{
-    position: absolute;
-    top: 30%;
-    right: 30%;
-    z-index: -1;
-    height: 60%;
-    opacity: 0.4;
-}
-
-.small-eclipse{
-    position: absolute;
-    bottom: 0%;
-    left: 14%;
-    z-index: -1;
-}
-
-.laptop-select{
-    width: 15%;
-    display: flex;
-    justify-content: space-around;
-    position: absolute;
-    right: 20%;
-}
+// CSS3 Animations
 
 @keyframes drop{
     0%{
@@ -165,43 +166,94 @@ nav{
 
     100%{
         opacity: 1;
-        transform: translateY(0px);
+        transform: translateY(0);
     }
 }
 
+.arrow-icons{
+    // Converts the (parent elements) column into row
+    display: flex;
+
+    justify-content: space-around;
+    width: 15%;
+    cursor: pointer;
+
+    /* position: absolute takes elements “out of flow” so its grid space gets collapsed. */
+    position: absolute;
+
+    right: 25%;
+}
+
+.big-eclipse{
+    /* position: absolute takes elements “out of flow” so its grid space gets collapsed. */
+    position: absolute;
+
+    top: 0px;
+    right: 0px;
+
+    /* stacks one on each other based on value  */
+    z-index: -1;
+
+    opacity: 0.5;
+    height: 80%;
+}
+
+.mid-eclipse{
+    /* position: absolute takes elements “out of flow” so its grid space gets collapsed. */
+    position: absolute;
+
+    top: 30%;
+    right: 30%;
+    height: 60%;
+    opacity: 0.4;
+
+    /* stacks one on each other based on value  */
+    z-index: -1;
+}
+
+.small-eclipse{
+    /* position: absolute takes elements “out of flow” so its grid space gets collapsed. */
+    position: absolute;
+
+    bottom: 0%;
+    left: 20%;
+
+    /* stacks one on each other based on value  */
+    z-index: -1;
+}
+
+// Media Queries
 @media screen and (max-width:1024px){
-    .presentation{
+    .main{
         flex-direction: column;
-    }
-    .introduction{
-        margin-top: 5vh;
-        text-align: center;
-    }
-    .intro-text{
-        h1{
-            font-size: 30px;
+
+        .text-with-buttons{
+            margin-top: 5px;
+            text-align: center;
+
+            .text-col{
+                h2{
+                    font-size: 30px;
+                }
+                p{
+                    font-size: 19px;
+                }
+            }
+
+            .buttons-col{
+                padding-top: 10px;
+            }
         }
-
-        p{
-            font-size: 18px;
-        }
     }
 
-    .cta{
-        padding-top: 10px;
-    }
-
-    .laptop-select{
+    .arrow-icons{
         bottom: 5%;
         right: 50%;
         width: 50%;
+
+        // transform:translate(x-axis y-axis)
         transform: translate(50%,5%);
     }
-
-    .cover img{
-        height: 80%;
-    }
-
     .small-eclipse,.mid-eclipse,.big-eclipse{
         opacity: 0.2;
     }
