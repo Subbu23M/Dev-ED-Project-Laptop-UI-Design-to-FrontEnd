@@ -1,23 +1,33 @@
-* {
-  margin: 0px;
-  padding: 0px;
+@charset "UTF-8";
+body {
+  padding: 0;
+  margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 button {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins',sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+li {
+  list-style: none;
 }
 
 header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 90%;
+  width: 80%;
   height: 10vh;
   margin: auto;
   -webkit-box-align: center;
@@ -25,55 +35,59 @@ header {
           align-items: center;
 }
 
-.logo-container, .nav-links, .cart {
+header .logo-with-text-container, header .nav-links, header .cart-icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.logo-container {
+header .logo-with-text-container {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-.logo {
-  font-weight: 400;
+header .logo-with-text-container img {
+  cursor: pointer;
+}
+
+header .logo-with-text-container .logo-text {
+  font-weight: bold;
+  color: lightcoral;
   margin: 5px;
 }
 
-nav {
+header nav {
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
 }
 
-.nav-links {
+header nav .nav-links {
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  list-style: none;
 }
 
-.nav-link {
-  color: #5f5f79;
-  font-size: 18px;
-  text-decoration: none;
+header nav .nav-links .nav-item a {
+  color: #5F5F79;
+  font-size: 1.2rem;
 }
 
-.cart {
+header .cart-icon {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  cursor: pointer;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
 
-.presentation {
+.main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 90%;
+  width: 80%;
   margin: auto;
   min-height: 80vh;
   -webkit-box-align: center;
@@ -81,108 +95,67 @@ nav {
           align-items: center;
 }
 
-.introduction {
+.main .text-with-buttons {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-.intro-text h1 {
-  font-size: 44px;
+.main .text-with-buttons .text-col h2 {
+  font-size: 40px;
   font-weight: 500;
-  background: -webkit-gradient(linear, left top, right top, from(#494964), to(#6f6f89));
-  background: linear-gradient(to right, #494964, #6f6f89);
+  background: -webkit-gradient(linear, left top, right top, from(#494964), to(#6F6F89));
+  background: linear-gradient(to right, #494964, #6F6F89);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.intro-text p {
+.main .text-with-buttons .text-col p {
   margin-top: 5px;
-  font-size: 22px;
+  font-size: 20px;
   color: #585772;
+  text-transform: capitalize;
 }
 
-.cta {
-  padding: 50px 0px 0px 0px;
+.main .text-with-buttons .buttons-col {
+  padding-top: 50px;
 }
 
-.cta .cta-select {
-  border: 2px solid #c36cbb;
+.main .text-with-buttons .buttons-col .select {
+  color: #C36CBB;
+  border: 2px solid #C36CBB;
+  cursor: pointer;
+  height: 50px;
+  width: 150px;
+  font-size: 16px;
   background: transparent;
-  color: #c36cbb;
-  width: 150px;
-  height: 50px;
-  cursor: pointer;
-  font-size: 16px;
 }
 
-.cta .cta-add {
-  background: #c36cbb;
-  width: 150px;
-  height: 50px;
+.main .text-with-buttons .buttons-col .add {
   cursor: pointer;
-  font-size: 16px;
+  height: 50px;
+  width: 150px;
+  background-color: #C36CBB;
   border: none;
   color: #fff;
-  margin-left: 30px;
-  margin-bottom: 30px;
+  margin-left: 5px;
+  margin-top: 2px;
+  font-size: 16px;
 }
 
-.cover {
+.main .photo {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   height: 60vh;
 }
 
-.cover img {
+.main .photo img {
   height: 100%;
-  -webkit-filter: drop-shadow(0px 5px 3px gray);
-          filter: drop-shadow(0px 5px 3px gray);
-  -webkit-animation: drop 1.5s ease;
-          animation: drop 1.5s ease;
-}
-
-.big-eclipse {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  z-index: -1;
-  opacity: 0.5;
-  height: 80%;
-}
-
-.mid-eclipse {
-  position: absolute;
-  top: 30%;
-  right: 30%;
-  z-index: -1;
-  height: 60%;
-  opacity: 0.4;
-}
-
-.small-eclipse {
-  position: absolute;
-  bottom: 0%;
-  left: 14%;
-  z-index: -1;
-}
-
-.laptop-select {
-  width: 15%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  position: absolute;
-  right: 20%;
+  -webkit-filter: drop-shadow(0px 7px 4px #C36CBB);
+          filter: drop-shadow(0px 7px 4px #C36CBB);
+  -webkit-animation: drop 2s ease;
+          animation: drop 2s ease;
 }
 
 @-webkit-keyframes drop {
@@ -193,8 +166,8 @@ nav {
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
@@ -206,40 +179,81 @@ nav {
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
+.arrow-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 15%;
+  cursor: pointer;
+  /* position: absolute takes elements “out of flow” so its grid space gets collapsed. */
+  position: absolute;
+  right: 25%;
+}
+
+.big-eclipse {
+  /* position: absolute takes elements “out of flow” so its grid space gets collapsed. */
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  /* stacks one on each other based on value  */
+  z-index: -1;
+  opacity: 0.5;
+  height: 80%;
+}
+
+.mid-eclipse {
+  /* position: absolute takes elements “out of flow” so its grid space gets collapsed. */
+  position: absolute;
+  top: 30%;
+  right: 30%;
+  height: 60%;
+  opacity: 0.4;
+  /* stacks one on each other based on value  */
+  z-index: -1;
+}
+
+.small-eclipse {
+  /* position: absolute takes elements “out of flow” so its grid space gets collapsed. */
+  position: absolute;
+  bottom: 0%;
+  left: 20%;
+  /* stacks one on each other based on value  */
+  z-index: -1;
+}
+
 @media screen and (max-width: 1024px) {
-  .presentation {
+  .main {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .introduction {
-    margin-top: 5vh;
+  .main .text-with-buttons {
+    margin-top: 5px;
     text-align: center;
   }
-  .intro-text h1 {
+  .main .text-with-buttons .text-col h2 {
     font-size: 30px;
   }
-  .intro-text p {
-    font-size: 18px;
+  .main .text-with-buttons .text-col p {
+    font-size: 19px;
   }
-  .cta {
+  .main .text-with-buttons .buttons-col {
     padding-top: 10px;
   }
-  .laptop-select {
+  .arrow-icons {
     bottom: 5%;
     right: 50%;
     width: 50%;
     -webkit-transform: translate(50%, 5%);
             transform: translate(50%, 5%);
-  }
-  .cover img {
-    height: 80%;
   }
   .small-eclipse, .mid-eclipse, .big-eclipse {
     opacity: 0.2;
